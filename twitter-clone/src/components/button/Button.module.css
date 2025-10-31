@@ -1,0 +1,14 @@
+.button {
+  border-radius: 8px;
+  text-align: inherit;
+  background-color: white;
+  color: var(--dark-blue-22303c);
+  box-shadow: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  border: none;
+
+  &:active {
+    background-color: var(--gray-f5f5f5);
+  }
+}

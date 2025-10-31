@@ -1,0 +1,19 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  max-width: 40ch;
+  gap: 8px;
+  width: 100%;
+  padding: calc(16px + 1vw);
+  border-radius: 16px;
+  background-color: var(--gray-48576c);
+}
+
+.submitButton {
+  margin-top: 4px;
+  align-self: flex-end;
+
+  &:disabled {
+    opacity: 0.2;
+  }
+}

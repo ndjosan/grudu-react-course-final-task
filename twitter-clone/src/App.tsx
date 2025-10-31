@@ -1,26 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import PrivateRoutes from "./utils/PrivateRoutes";
+import NotAuthRoutes from "./utils/NotAuthRoutes";
+import Layout from "./layouts/Layout";
+import HomePage from "./pages/HomePage";
+import LoginPage from "./pages/LoginPage";
+import SignupPage from "./pages/SignupPage";
+import { UserProvider } from "./state/UserContext";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <UserProvider>
+      <div className="App">
+        <Router>
+          <Routes>
+            <Route element={<Layout />}>
+              <Route element={<PrivateRoutes />}>
+                <Route element={<HomePage />} path="/" />
+              </Route>
+              <Route element={<NotAuthRoutes />}>
+                <Route element={<LoginPage />} path="/login" />
+                <Route element={<SignupPage />} path="/signup" />
+              </Route>
+            </Route>
+          </Routes>
+        </Router>
+      </div>
+    </UserProvider>
   );
-}
+};
 
 export default App;

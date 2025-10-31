@@ -1,0 +1,17 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tweet {
+  padding: 12px;
+}
+
+.submit {
+  align-self: flex-end;
+
+  &:disabled {
+    opacity: 0.2;
+  }
+}

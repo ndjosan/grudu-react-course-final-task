@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 16px;
+  text-transform: capitalize;
+}
+
+.input {
+  padding: 12px 8px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+}
+
+.error {
+  font-size: 12px;
+  line-height: 12px;
+  min-height: 12px;
+  color: var(--red-ff0000);
+  visibility: visible;
+}
+
+.hide {
+  visibility: hidden;
+}

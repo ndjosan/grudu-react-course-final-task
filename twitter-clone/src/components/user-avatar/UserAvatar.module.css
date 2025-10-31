@@ -1,0 +1,16 @@
+.credentials {
+  font-size: 24px;
+  font-weight: 500;
+  padding: 16px;
+  border-radius: 100%;
+  background-color: var(--gray-8899ac);
+  aspect-ratio: 1 / 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: max-content;
+}
+
+.name {
+  text-transform: capitalize;
+}
